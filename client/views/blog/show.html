@@ -1,19 +1,21 @@
 <template name="blogShow">
-  <div class="meteor-blog-single">
-    {{#with post}}
-      {{#if featuredImage}}
-        {{> blogShowFeaturedImage}}
-      {{/if}}
-    {{/with}}
-    {{#if blogReady}}
+  <div class="container">
+    <div class="meteor-blog-single">
       {{#with post}}
-        {{> blogShowBody}}
-      {{else}}
-        {{> Template.dynamic template=notFound}}
+        {{#if featuredImage}}
+          {{> blogShowFeaturedImage}}
+        {{/if}}
       {{/with}}
-    {{else}}
-      {{> blogLoading}}
-    {{/if}}
+      {{#if blogReady}}
+        {{#with post}}
+          {{> blogShowBody}}
+        {{else}}
+          {{> Template.dynamic template=notFound}}
+        {{/with}}
+      {{else}}
+        {{> blogLoading}}
+      {{/if}}
+    </div>
   </div>
 </template>
 

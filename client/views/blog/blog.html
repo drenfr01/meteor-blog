@@ -1,11 +1,13 @@
 <template name="blogIndex">
-  <div class="meteor-blog-index">
-    {{#if blogReady}}
-      {{> blogIndexLoop posts=posts}}
-      {{blogPager}}
-    {{else}}
-      {{> blogLoading}}
-    {{/if}}
+  <div class="container">
+    <div class="meteor-blog-index">
+      {{#if blogReady}}
+        {{> blogIndexLoop posts=posts}}
+        {{blogPager}}
+      {{else}}
+        {{> blogLoading}}
+      {{/if}}
+    </div>
   </div>
 </template>
 

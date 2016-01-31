@@ -32,7 +32,8 @@ Template.blogAdmin.helpers
     showFilter: false
     showNavigation: 'auto'
     useFontAwesome: true
-    'class': 'table table-striped table-hover col-sm-12 table-bordered'
+    'class': 'table table-striped table-hover col-sm-12 table-bordered
+    customTable'
     fields: [
       { key: 'title', label: Blog.settings.language.title, tmpl: Template.blogAdminTitleColumn }
       { key: 'userId', label: Blog.settings.language.author, tmpl: Template.blogAdminAuthorColumn }
